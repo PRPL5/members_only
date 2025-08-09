@@ -9,11 +9,14 @@ res.render('sign-up')
 }
 
 const createSignUpPost = async (req,res)=>{
-    const { firstname , lastname , email , password } = req.body;
-    if (!firstname || !lastname || !email || !password ){
+    const { firstname , lastname , email , password , confirmPassword } = req.body;
+    if (!firstname || !lastname || !email || !password || !confirmPassword ){
         return res.status(400).json({error:"All fields are required !!"});
     } 
-
+  if (password !== confirmPassword) {
+    req.flash('error', 'Passwords do not match');
+    return res.redirect('/sign-up');
+  }
     await db.insertUser(firstname , lastname , email , password );
     res.redirect('/log-in')
 }
