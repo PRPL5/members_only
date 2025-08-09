@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+   background-color: #24292e;
+            font-family: Arial, Helvetica, sans-serif
+  }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+form{
+display: flex;
+flex-direction: column;
+align-items:center;
+gap: 12px;
+}
+
+input{
+  background-color: inherit;
+  width:100%;
+  height: 40px;
+  border: 1px solid magenta;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+button{
+  width: 98%;
+  height: 35px;
+  border: 1px solid magenta;
+  border-radius: 12px;
+background-color: inherit;
+color: #999999;
+font-size: 16px;
+font-weight: bold;
+}
+</style>
+<body>
+  <div class="container">
+    <h1>You are not a member!</h1>
+
+    <h2>To become a member insert the secret code below , or click <a href="/">here to go back .</a></h2>
+
+<form action="/member" method="POST">
+  <input type="text" name="codeword" placeholder="Codeword">
+  <button type="submit">Submit</button>
+<% if (locals.error !== null && locals.error !== undefined) { %>
+    <p style="color: red"><%= error %></p>
+  <% } %>
+</form>
+</div>
+   
+</body>
+</html>

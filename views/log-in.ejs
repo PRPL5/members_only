@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .login-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .login-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .login-header h2 {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .login-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-form input[type="text"], .login-form input[type="password"] {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .login-form input[type="submit"] {
+    width: 80%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .login-form input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+  .login-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login-footer a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+
+  .login-footer a:hover {
+    color: #23527c;
+  }
+</style>
+
+<div class="login-container">
+  <div class="login-header">
+    <h2>Login</h2>
+  </div>
+  <form class="login-form" action="/log-in" method="post">
+    <input type="text" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+  </form>
+  <div class="login-footer">
+    <p>Don't have an account? <a href="/register">Register</a></p>
+  </div>
+</div>
+</html>

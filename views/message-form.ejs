@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+  body {
+   background-color: #24292e;
+            font-family: Arial, Helvetica, sans-serif
+  }
+
+  .message-form-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .message-form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .message-form-header h2 {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .message-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message-form textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .message-form input[type="submit"] {
+    width:80%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .message-form input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+</style>
+
+<div class="message-form-container">
+  <div class="message-form-header">
+    <h2>Send a Message</h2>
+  </div>
+  <form class="message-form" action="/new-msg" method="POST">
+    <textarea name="content" placeholder="Type your message here..."></textarea>
+    <input type="submit" value="Send">
+  </form>
+</div>
+</body>
+</html>
